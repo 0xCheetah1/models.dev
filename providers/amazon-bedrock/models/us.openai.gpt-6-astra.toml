@@ -28,4 +28,4 @@ input = ["text", "image"]
 
 [experimental.modes.ultrafast]
 cost = { input = 66.00, output = 330.00, cache_read = 6.60, cache_write = 82.50 }
-provider = { body = { service_tier = "ultrafast" } }
+provider = { body = { additionalModelRequestFields = { service_tier = "ultrafast" } } }
