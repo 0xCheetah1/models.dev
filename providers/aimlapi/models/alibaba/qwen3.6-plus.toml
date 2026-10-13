@@ -1,0 +1,13 @@
+# AIMLAPI Qwen3.6-Plus: https://aimlapi.com/models/qwen3-6-plus (alibaba/qwen3.6-plus, 1M context, 65,536 max output, $0.52/$3.12 per 1M)
+# Docs: https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3.6-plus (OpenAI-compatible chat completions, no reasoning_effort in schema, reasoning_content in example response)
+# Thinking list omits qwen3.6-plus: https://docs.aimlapi.com/capabilities/thinking-reasoning (same-generation qwen3.6-max-preview peer documents no caller control on this gateway)
+# No caller control: reasoning is always-on via reasoning_content; toggle/budget/effort fields are not exposed for this model on AIMLAPI.
+base_model = "alibaba/qwen3.6-plus"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.52
+output = 3.12
