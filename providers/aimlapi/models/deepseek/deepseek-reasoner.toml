@@ -1,0 +1,16 @@
+# AI/ML API DeepSeek R1 — model id deepseek/deepseek-reasoner.
+# Pricing: input $0.39, output $1.56, cached input $0.0078 per 1M tokens; 128K context.
+# https://aimlapi.com/models/deepseek-r1-api
+# Docs: deepseek/deepseek-r1 and deepseek-reasoner are the same DeepSeek R1 model.
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-r1
+# Schema exposes reasoning_content with no reasoning-effort control (always-on reasoner).
+base_model = "deepseek/deepseek-r1"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.39
+output = 1.56
+cache_read = 0.0078
