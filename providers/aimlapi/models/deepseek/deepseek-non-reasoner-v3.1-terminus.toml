@@ -1,0 +1,11 @@
+# AIMLAPI non-reasoning Terminus alias — pinned non-thinking mode of the hybrid Terminus checkpoint.
+# Sources:
+# - https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-non-reasoner-v3.1-terminus (September 2025 update of the DeepSeek Chat V3.1 non-reasoning model)
+# - https://aimlapi.com/models/deepseek-v3-1-terminus-non-reasoning (model id deepseek/deepseek-non-reasoner-v3.1-terminus; 128K context, 8K max output, text->text; input $0.371358/1M, output $1.3754/1M, cached input $0.371358/1M)
+base_model = "deepseek/deepseek-v3.1-terminus"
+reasoning = false
+
+[cost]
+input = 0.371358
+output = 1.3754
+cache_read = 0.371358

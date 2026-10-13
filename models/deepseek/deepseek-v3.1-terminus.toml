@@ -1,0 +1,29 @@
+# DeepSeek-V3.1-Terminus lab metadata — hybrid Think/Non-Think update of V3.1.
+# Sources:
+# - https://www.deepseek.com/en/news/v3-1-terminus (2025-09-22 release, language-consistency + Code/Search agent upgrades, open weights, App/Web/API)
+# - https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus (MIT license, 685B params, hybrid thinking/non-thinking modes)
+# - https://aimlapi.com/models/deepseek-v3-1-terminus-non-reasoning (128K context, 8K max output, text->text)
+name = "DeepSeek-V3.1-Terminus"
+description = "Updated DeepSeek V3.1 checkpoint with improved language consistency and agent performance, supporting thinking and non-thinking modes"
+family = "deepseek"
+release_date = "2025-09-22"
+last_updated = "2025-09-22"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+license = "MIT License"
+
+[limit]
+context = 128_000
+output = 8_192
+
+[modalities]
+input = ["text"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus"
