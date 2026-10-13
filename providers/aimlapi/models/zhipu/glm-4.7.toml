@@ -1,0 +1,17 @@
+# https://aimlapi.com/models/glm-4-7 — model zhipu/glm-4.7, $0.78 in / $2.86 out / $0.143 cached per 1M, 200K context, 128K max output
+# https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-4.7 — 200K context, 128K output, reasoning_content in response, request schema has no thinking/reasoning control
+# No caller control: request schema lists no thinking/reasoning_effort/enable_thinking field (unlike zhipu/glm-5.3 which exposes thinking.type); response always includes reasoning_content.
+base_model = "zhipuai/glm-4.7"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.78
+output = 2.86
+cache_read = 0.143
+
+[limit]
+context = 200_000
+output = 128_000
