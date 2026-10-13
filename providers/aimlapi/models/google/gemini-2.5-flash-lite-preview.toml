@@ -1,0 +1,17 @@
+# Sources:
+# - https://aimlapi.com/models/google-gemini-2-5-flash-lite-preview (aimlapi model ID google/gemini-2.5-flash-lite-preview, input $0.0975/1M, output $0.39/1M, cached input $0.0975/1M, 1M context, 65,536 max output, Sept 9 2025 listing)
+# - https://docs.aimlapi.com/api-references/text-models-llm/google/gemini-2.5-flash-lite-preview (chat completions path, reasoning_effort low|medium|high, tools/parallel-tool-calls, structured JSON schema, temperature)
+# - https://ai.google.dev/gemini-api/docs/models/gemini-2.5-flash-lite-preview-09-2025 (underlying preview model code gemini-2.5-flash-lite-preview-09-2025)
+base_model = "google/gemini-2.5-flash-lite-preview"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.0975
+output = 0.39
+cache_read = 0.0975
+
+[limit]
+context = 1_000_000
