@@ -1,0 +1,22 @@
+# Sources:
+# - https://aimlapi.com/models/unbiased-pareto-26-10-preview (context 1,048,576, max output 131,072, modalities Image/Text->Text, release Oct 1 2026, streaming/tool calling/vision)
+# - https://unbiased.ai/blog/pareto-26-10-preview (preview release Oct 1 2026)
+# - https://unbiased.ai/model-card/ (blended/composite model details)
+name = "Pareto 26.10 Preview"
+description = "Preview release of Pareto, Unbiased's multimodal composite model for research, coding and agentic workflows"
+release_date = "2026-10-01"
+last_updated = "2026-10-01"
+attachment = true
+reasoning = false
+temperature = true
+tool_call = true
+structured_output = false
+open_weights = false
+
+[limit]
+context = 1_048_576
+output = 131_072
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]

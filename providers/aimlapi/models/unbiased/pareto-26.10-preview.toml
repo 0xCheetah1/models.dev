@@ -1,0 +1,9 @@
+# Sources:
+# - https://aimlapi.com/models/unbiased-pareto-26-10-preview (pricing $1.10032 in / $4.40128 out / $0.041262 cached per 1M)
+# - https://aimlapi.com/providers/unbiased (confirms preview pricing and 1,048,576 context)
+base_model = "unbiased/pareto-26.10-preview"
+
+[cost]
+input = 1.10032
+output = 4.40128
+cache_read = 0.041262
