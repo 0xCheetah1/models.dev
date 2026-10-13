@@ -1,0 +1,11 @@
+# AIMLAPI serves google/gemini-2.5-pro-preview (Gemini 2.5 Pro Preview 06-05).
+# Pricing: https://aimlapi.com/models/google-gemini-2-5-pro-preview (Input $1.71925, Output $13.754, Cached input $0.171925 per 1M tokens; context 1,048,576, max output 65,536).
+# Reasoning: https://docs.aimlapi.com/capabilities/thinking-reasoning (Google models expose no reasoning control parameter) and https://docs.aimlapi.com/api-references/text-models-llm/google/gemini-2.5-pro (2.5 Pro schema has no reasoning_effort).
+# No caller control on this host for 2.5-series Gemini.
+base_model = "google/gemini-2.5-pro-preview"
+reasoning_options = []
+
+[cost]
+input = 1.71925
+output = 13.754
+cache_read = 0.171925
