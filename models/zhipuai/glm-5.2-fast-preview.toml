@@ -1,0 +1,27 @@
+# GLM-5.2-Fast-Preview is Zhipu AI's high-speed GLM-5.2 variant served by Alibaba Cloud Model Studio.
+# 1M context, 131072 max output, text in/out, function calling + structured outputs + context caching:
+# https://www.alibabacloud.com/help/en/model-studio/glm-5-2-fast
+# Thinking on by default (reasoning_content); enable_thinking + reasoning_effort
+# none/minimal/low/medium/high/xhigh/max:
+# https://www.alibabacloud.com/help/en/model-studio/glm
+# Release Jul 10, 2026 as alibaba/glm-5.2-fast-preview, built by Zhipu AI:
+# https://aimlapi.com/models/alibaba-glm-5-2-fast-preview
+name = "GLM-5.2-Fast-Preview"
+description = "High-speed preview variant of GLM-5.2 with 1M context, optimized for low-latency chat and agents"
+family = "glm"
+release_date = "2026-07-10"
+last_updated = "2026-07-10"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = false
+
+[limit]
+context = 1_000_000
+output = 131_072
+
+[modalities]
+input = ["text"]
+output = ["text"]

@@ -1,0 +1,21 @@
+# AIMLAPI alibaba/glm-5.2-fast-preview (Zhipu-built, Alibaba Cloud Model Studio hosted).
+# Pricing/context: input $4.55, output $14.3, cached $0.91 per 1M; 1M context, 131072 max output, text->text:
+# https://aimlapi.com/models/alibaba-glm-5-2-fast-preview
+# Native reasoning for this model: thinking on by default (reasoning_content);
+# enable_thinking + reasoning_effort none/minimal/low/medium/high/xhigh/max:
+# https://www.alibabacloud.com/help/en/model-studio/glm
+# https://www.alibabacloud.com/help/en/model-studio/glm-5-2-fast
+base_model = "zhipuai/glm-5.2-fast-preview"
+name = "GLM 5.2 Fast Preview"
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 4.55
+output = 14.3
+cache_read = 0.91
