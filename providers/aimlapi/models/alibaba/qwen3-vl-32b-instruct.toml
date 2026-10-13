@@ -1,0 +1,13 @@
+# https://aimlapi.com/models/qwen3-vl-32b-instruct (Input $0.91/1M, Output $3.64/1M, 126K context, 32,768 max output, image+text input)
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-instruct (model alibaba/qwen3-vl-32b-instruct, chat completions with tools and image_url)
+base_model = "alibaba/qwen3-vl-32b-instruct"
+
+[cost]
+input = 0.91
+output = 3.64
+
+[limit]
+context = 126_000
+
+[modalities]
+input = ["text", "image"]
