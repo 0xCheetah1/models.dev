@@ -1,0 +1,22 @@
+# Sources (accessed 2026-10-13):
+# - https://aimlapi.com/models/bytedance-seed-2-1-turbo (Input $0.6877 / Output $3.4385 per 1M, 262K context, Released Aug 10 2026)
+# - https://api.aimlapi.com/v1/models?id=bytedance-seed%2Fseed-2-1-turbo&include=pricing,modalities (contextLength 262144, outputMax 262144, USD pricing)
+# - https://api.aimlapi.com/docs-json?model=bytedance-seed%2Fseed-2-1-turbo&endpoint=openai%2Fchat-completions (reasoning_effort none|low|medium|high)
+# - https://seed.bytedance.com/en/seed2_1 (Seed 2.1 Pro/Turbo family, ByteDance lab)
+# Peer baseline: providers/empiriolabs/models/seed-2-1-turbo.toml (toggle + low|medium|high);
+#   providers/openrouter/models/bytedance-seed/seed-2-1-turbo.toml (toggle-only).
+# Host drops `none` (lab does not list it, not measured as real off) and toggle (gateway drops
+# unknown keys per sync probe); siblings publish low|medium|high so that set is used here.
+base_model = "bytedance-seed/seed-2.1-turbo"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.6877
+output = 3.4385
+
+[limit]
+context = 262_144
+output = 262_144
