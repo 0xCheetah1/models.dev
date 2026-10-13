@@ -1,0 +1,16 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/alibaba-glm-5-2 (model ID alibaba/glm-5.2, Zhipu AI, 1M context / 131072 max output, text->text, input $1.82 / output $5.72 / cached $0.364, reasoning_content + reasoning_effort)
+# https://www.alibabacloud.com/help/en/model-studio/glm (glm-5.2 reasoning_effort = none|minimal|low|medium|high|xhigh|max; none disables reasoning so no separate toggle)
+# https://www.alibabacloud.com/help/en/model-studio/glm-5-2 (1M context, 131072 output, text->text, function calling + structured outputs)
+# Effort: reasoning_effort = none|minimal|low|medium|high|xhigh|max
+base_model = "zhipuai/glm-5.2"
+name = "GLM 5.2"
+reasoning_options = [{ type = "effort", values = ["none", "minimal", "low", "medium", "high", "xhigh", "max"] }]
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 1.82
+output = 5.72
+cache_read = 0.364
