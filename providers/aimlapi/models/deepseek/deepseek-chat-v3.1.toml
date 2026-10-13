@@ -1,0 +1,14 @@
+# https://aimlapi.com/models/deepseek-v3-1-chat — model ID deepseek/deepseek-chat-v3.1, Chat variant in non-thinking mode, 128K context / 8K max output, $0.89401 in / $2.33818 out / $0.75647 cached
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-chat-v3.1 — "August 2025 update of the DeepSeek V3 non-reasoning model."
+# https://docs.aimlapi.com/capabilities/thinking-reasoning — DeepSeek reasoning list is only deepseek-v4-pro / deepseek-v4-flash (no chat-v3.1 control)
+base_model = "deepseek/deepseek-chat-v3.1"
+reasoning = false
+
+[cost]
+input = 0.89401
+output = 2.33818
+cache_read = 0.75647
+
+[limit]
+context = 128_000
+output = 8_000
