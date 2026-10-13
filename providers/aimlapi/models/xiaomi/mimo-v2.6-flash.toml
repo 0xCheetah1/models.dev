@@ -1,0 +1,17 @@
+# Sources:
+# - Pricing (input $0.192556, output $0.385112, cached input $0.0038511): https://aimlapi.com/models/xiaomi-mimo-v2-6-flash
+# - API reference (model ID xiaomi/mimo-v2.6-flash, 1M context): https://docs.aimlapi.com/api-references/text-models-llm/xiaomi/mimo-v2.6-flash
+# - Lab deep-thinking control (thinking.type enabled|disabled): https://mimo.mi.com/docs/en-US/quick-start/usage-guide/text-generation/deep-thinking
+# No caller control: reasoning_effort is validated (invalid value -> 400) but low/high
+# do not order reasoning tokens; toggle/budget fields are dropped by the gateway.
+base_model = "xiaomi/mimo-v2.6-flash"
+name = "MiMo V2.6 Flash"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_details"
+
+[cost]
+input = 0.192556
+output = 0.385112
+cache_read = 0.0038511
