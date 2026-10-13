@@ -1,0 +1,7 @@
+# https://aimlapi.com/models/qwen3-omni
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-omni-30b-a3b-captioner
+base_model = "alibaba/qwen3-omni-30b-a3b-captioner"
+
+[cost]
+input = 4.953
+output = 3.978

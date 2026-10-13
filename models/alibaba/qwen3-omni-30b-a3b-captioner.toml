@@ -1,0 +1,27 @@
+# https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Captioner
+# https://github.com/QwenLM/Qwen3-Omni
+# https://arxiv.org/abs/2509.17765
+# https://www.alibabacloud.com/help/en/model-studio/qwen3-omni-captioner
+name = "Qwen3 Omni 30B A3B Captioner"
+description = "Fine-tuned Qwen3-Omni model generating detailed, low-hallucination captions for arbitrary audio inputs"
+family = "qwen"
+release_date = "2025-09-22"
+last_updated = "2025-09-22"
+attachment = false
+reasoning = false
+tool_call = false
+temperature = true
+open_weights = true
+license = "Apache-2.0"
+
+[limit]
+context = 65_536
+output = 32_768
+
+[modalities]
+input = ["audio"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/Qwen/Qwen3-Omni-30B-A3B-Captioner"
