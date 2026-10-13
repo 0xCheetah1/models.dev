@@ -1,0 +1,14 @@
+# Sources:
+# https://aimlapi.com/models/grok-4-fast-reasoning — Input $1.625/1M, Output $3.25/1M, Cached input $0.26/1M; context 2M, max output 1,999,000; reasoning always active.
+# https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-4-fast-reasoning — model id x-ai/grok-4-fast-reasoning, 2M-token context, reasoning variant.
+base_model = "xai/grok-4-fast-reasoning"
+name = "Grok 4 Fast Reasoning"
+reasoning_options = []
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26
+
+[limit]
+output = 1_999_000
