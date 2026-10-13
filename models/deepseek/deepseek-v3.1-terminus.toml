@@ -1,0 +1,28 @@
+# DeepSeek-V3.1-Terminus lab metadata.
+# Release 2025-09-22 (App/Web/API): https://api-docs.deepseek.com/news/news250922
+# Weights (MIT, maintains V3.1 capabilities, language/agent fixes): https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus
+# V3.1 hybrid thinking/non-thinking, 128K context: https://api-docs.deepseek.com/news/news250821
+name = "DeepSeek V3.1 Terminus"
+description = "Updated DeepSeek V3.1 checkpoint with improved language consistency and agent performance"
+family = "deepseek"
+release_date = "2025-09-22"
+last_updated = "2025-09-22"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+license = "MIT License"
+
+[limit]
+context = 131_072
+output = 8_192
+
+[modalities]
+input = ["text"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V3.1-Terminus"

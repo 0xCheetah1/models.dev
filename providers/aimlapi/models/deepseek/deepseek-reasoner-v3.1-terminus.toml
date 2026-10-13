@@ -1,0 +1,18 @@
+# AIMLAPI model page (128K context, 8K max output, Text->Text, input $0.371358 / output $1.3754 / cached $0.371358): https://aimlapi.com/models/deepseek-deepseek-reasoner-v3-1-terminus
+# AIMLAPI docs (model id deepseek/deepseek-reasoner-v3.1-terminus, chat completions, reasoning_content in response, PDF file_data; schema lists no reasoning_effort/reasoning control): https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.1-terminus
+# AIMLAPI thinking controls (reasoning_effort low/medium/high documented for OpenAI and DeepSeek V4 models only; V3.1-Terminus not listed): https://docs.aimlapi.com/capabilities/thinking-reasoning
+# DeepSeek changelog (deepseek-reasoner = thinking mode of V3.1-Terminus since 2025-09-22): https://api-docs.deepseek.com/updates/
+base_model = "deepseek/deepseek-v3.1-terminus"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.371358
+output = 1.3754
+cache_read = 0.371358
+
+[limit]
+context = 128_000
+output = 8_000
