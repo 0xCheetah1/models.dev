@@ -1,0 +1,26 @@
+# Sources (accessed 2026-10-13):
+# https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507 (Apache-2.0, 235B/22B MoE, native context 262144, thinking-only, tool usage, 32768 output guidance)
+# https://github.com/QwenLM/Qwen3 (release 2025-07-25 for Qwen3-235B-A22B-Thinking-2507)
+name = "Qwen3 235B-A22B Thinking 2507"
+description = "Open Qwen3 MoE thinking-only model for deep reasoning, math, science, and coding"
+family = "qwen"
+release_date = "2025-07-25"
+last_updated = "2025-07-25"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+open_weights = true
+license = "Apache 2.0"
+
+[limit]
+context = 262_144
+output = 32_768
+
+[modalities]
+input = ["text"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507"

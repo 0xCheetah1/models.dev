@@ -1,0 +1,18 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/alibaba-qwen3-235b-a22b-thinking-2507 (input $0.299/1M, output $2.99/1M, context 32000, max output 16000, text->text, tools/parallel tools/structured output)
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-235b-a22b-thinking-2507 (chat completions schema, tools/tool_choice support, reasoning_content response channel)
+# https://huggingface.co/Qwen/Qwen3-235B-A22B-Thinking-2507 (native context 262144)
+# No caller control on this gateway: model schema exposes no enable_thinking/thinking_budget/reasoning_effort fields (unlike hybrid Qwen docs); thinking always on.
+base_model = "alibaba/qwen3-235b-a22b-thinking-2507"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.299
+output = 2.99
+
+[limit]
+context = 32_000
+output = 16_000
