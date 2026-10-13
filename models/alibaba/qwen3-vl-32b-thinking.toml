@@ -1,0 +1,28 @@
+# https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking (Apache-2.0, dense 32B VL thinking; handles images and videos alongside text; native 256K context expandable to 1M)
+# https://arxiv.org/pdf/2511.21631v1 (Qwen3-VL Technical Report: dense 2B/4B/8B/32B + MoE variants, 256K native interleaved text/images/video, thinking variants)
+# https://artificialanalysis.ai/models/qwen3-vl-32b-reasoning (released Oct 21 2025, 256k context, text+image in, Apache 2.0, open weights)
+# https://aimlapi.com/models/qwen3-vl-32b-thinking (126K host context, 32,768 max output, image+text input, Tools/Structured output)
+name = "Qwen3 VL 32B Thinking"
+description = "Dense vision-language thinking model for visual reasoning, documents, and agent tasks"
+family = "qwen"
+release_date = "2025-10-21"
+last_updated = "2025-10-21"
+attachment = true
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+license = "Apache-2.0"
+
+[limit]
+context = 262_144
+output = 32_768
+
+[modalities]
+input = ["text", "image", "video"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/Qwen/Qwen3-VL-32B-Thinking"

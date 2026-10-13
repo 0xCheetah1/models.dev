@@ -1,0 +1,20 @@
+# https://aimlapi.com/models/qwen3-vl-32b-thinking (input $0.91/1M, output $10.92/1M, 126K context, 32,768 max output, image+text input, released Nov 11 2025)
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-vl-32b-thinking (thinking model; response exposes reasoning_content + reasoning_tokens)
+# Reasoning baseline copied from first-party Alibaba Qwen3-VL thinking entries (budget_tokens, e.g. providers/alibaba/models/qwen3-vl-30b-a3b.toml); AIMLAPI forwards Alibaba thinking fields (see qwen3-32b enable_thinking/thinking_budget, qwen3-next-80b-a3b-thinking enable_thinking example).
+base_model = "alibaba/qwen3-vl-32b-thinking"
+
+[interleaved]
+field = "reasoning_content"
+
+[[reasoning_options]]
+type = "budget_tokens"
+
+[cost]
+input = 0.91
+output = 10.92
+
+[limit]
+context = 126_000
+
+[modalities]
+input = ["text", "image"]
