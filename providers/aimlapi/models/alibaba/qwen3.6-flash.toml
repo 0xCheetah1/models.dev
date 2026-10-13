@@ -1,0 +1,13 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen3-6-flash — alibaba/qwen3.6-flash, input $0.325 / output $1.95 per 1M, 1M context / 65,536 max output, reasoning + tools
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3.6-flash — chat completions schema, reasoning_content in response, no reasoning control param
+# No caller control: schema exposes no enable_thinking/thinking_budget/reasoning_effort; same-host alibaba/qwen3.6-max-preview uses [].
+base_model = "alibaba/qwen3.6-flash"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.325
+output = 1.95
