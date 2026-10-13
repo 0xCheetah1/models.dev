@@ -1,0 +1,18 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen-3-6-27b — alibaba/qwen3.6-27b pricing $0.78 input / $4.68 output per 1M; Image,Text -> Text; 256K context
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3.6-27b — reasoning_effort low|medium|high, reasoning_content example, image_url input only
+base_model = "alibaba/qwen3.6-27b"
+
+[interleaved]
+field = "reasoning_content"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium"]
+
+[cost]
+input = 0.78
+output = 4.68
+
+[modalities]
+input = ["text", "image"]
