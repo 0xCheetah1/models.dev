@@ -1,0 +1,10 @@
+# Sources: https://aimlapi.com/models/xiaomi-mimo-v2-6-pro (Input $0.598299, Output $1.196598, Cached input $0.0049514, Context 1,048,576, Max Output 131,072) and https://docs.aimlapi.com/api-references/text-models-llm/xiaomi/mimo-v2.6-pro (model ID xiaomi/mimo-v2.6-pro)
+# No caller control on this gateway for MiMo (like mimo-v2.5 peers): native Xiaomi toggle thinking.type is not exposed; reasoning_effort does not order reasoning tokens.
+base_model = "xiaomi/mimo-v2.6-pro"
+name = "MiMo V2.6 Pro"
+reasoning_options = []
+
+[cost]
+input = 0.598299
+output = 1.196598
+cache_read = 0.0049514
