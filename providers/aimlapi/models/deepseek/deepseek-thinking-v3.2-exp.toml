@@ -1,0 +1,14 @@
+# https://aimlapi.com/models/deepseek-v3-2-exp-thinking (input $0.371358, output $0.563914, cached $0.371358; 128K context / 64K output; text->text; Tools, Structured output, Streaming)
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-thinking (model id deepseek/deepseek-thinking-v3.2-exp, reasoning_content, reasoning_tokens; schema lists no reasoning_effort)
+# https://www.deepseek.com/en/news/v3-2-exp/ (lab release 2025-09-29)
+# No caller control: thinking/non-thinking are split model IDs (not a toggle); capability index omits this model while V4 lists reasoning_effort. Mirrors qiniu-ai/nano-gpt thinking-only [] precedent.
+base_model = "deepseek/deepseek-v3.2-exp"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.371358
+output = 0.563914
+cache_read = 0.371358
