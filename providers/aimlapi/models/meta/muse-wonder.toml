@@ -1,0 +1,14 @@
+# Sources:
+# https://aimlapi.com/models/meta-muse-wonder — live as meta/muse-wonder (maps to Meta muse-wonder-1.0); pricing Input $5.5016 / Output $27.508 / Cached input $0.27508 per 1M tokens; context 1,048,576; released Oct 12, 2026.
+# https://docs.aimlapi.com/api-references/text-models-llm/meta/muse-wonder — POST /v1/chat/completions schema: top-level reasoning_effort enum ["minimal", "low", "medium", "high", "xhigh", "max"].
+# https://dev.meta.ai/models/muse-wonder/ — Meta lists muse-wonder-1.0 context 1M; first-party Input $4.00 / Cached $0.20 / Output $20.00.
+base_model = "meta/muse-wonder-1.0"
+
+[[reasoning_options]]
+type = "effort"
+values = ["minimal", "low", "medium", "high", "xhigh", "max"]
+
+[cost]
+input = 5.5016
+output = 27.508
+cache_read = 0.27508
