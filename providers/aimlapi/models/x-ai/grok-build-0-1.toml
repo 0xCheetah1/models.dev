@@ -1,0 +1,13 @@
+# AIMLAPI pricing ($1.3 input / $2.6 output / $0.26 cached) and model ID x-ai/grok-build-0-1:
+# https://aimlapi.com/models/grok-build-0-1
+# AIMLAPI chat-completions schema for this model exposes reasoning.effort = low|medium|high:
+# https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-build-0-1
+# Lab context (256k) and tiered first-party pricing:
+# https://docs.x.ai/developers/models/grok-build-0.1
+base_model = "xai/grok-build-0.1"
+reasoning_options = [{ type = "effort", values = ["low", "medium", "high"] }]
+
+[cost]
+input = 1.3
+output = 2.6
+cache_read = 0.26
