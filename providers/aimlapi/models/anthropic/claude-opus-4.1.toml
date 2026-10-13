@@ -1,0 +1,15 @@
+# AIMLAPI serves anthropic/claude-opus-4.1 as "Claude 4.1 Opus" (200K context, 32K output).
+# Pricing (USD/MTok): https://aimlapi.com/models/claude-opus-4-1 — input 20.631, output 103.155, cached input 2.0631.
+# Live catalog: https://api.aimlapi.com/v1/models?include=pricing — same input/output/cached prices per 1M tokens.
+# API: https://docs.aimlapi.com/api-references/text-models-llm/anthropic/claude-opus-4.1 — thinking.budget_tokens minimum 1024, type enabled; max_tokens default 32000.
+base_model = "anthropic/claude-opus-4-1"
+name = "Claude 4.1 Opus"
+
+[[reasoning_options]]
+type = "budget_tokens"
+min = 1_024
+
+[cost]
+input = 20.631
+output = 103.155
+cache_read = 2.0631
