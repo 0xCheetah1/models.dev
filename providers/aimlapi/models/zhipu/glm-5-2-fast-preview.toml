@@ -1,0 +1,21 @@
+# GLM 5.2 Fast Preview on AI/ML API (zhipu/glm-5-2-fast-preview).
+# High-speed preview variant of Zhipu GLM-5.2: same 1M context, 1.5-2x faster output.
+# Pricing (USD per 1M tokens): https://aimlapi.com/models/zhipu-glm-5-2-fast-preview (accessed 2026-10-13):
+# input $4.55, output $14.3, cached input $0.91.
+# Identity/context (1M context, 131072 max output, text->text, reasoning/tool-calling):
+# https://aimlapi.com/models/zhipu-glm-5-2-fast-preview and
+# https://www.alibabacloud.com/help/en/model-studio/glm-5-2-fast (high-speed variant of GLM-5.2,
+# 1048576 context, 131072 output).
+# Reasoning baseline: lab providers/zhipuai/models/glm-5.2.toml (effort high|max) intersected with
+# same-host peer providers/aimlapi/models/zhipu/glm-5.2.toml (effort high).
+base_model = "zhipuai/glm-5.2"
+name = "GLM 5.2 Fast Preview"
+
+[[reasoning_options]]
+type = "effort"
+values = ["high"]
+
+[cost]
+input = 4.55
+output = 14.3
+cache_read = 0.91
