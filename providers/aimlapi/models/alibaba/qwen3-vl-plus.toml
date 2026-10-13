@@ -1,0 +1,17 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen3-vl-plus (model ID alibaba/qwen3-vl-plus; input $0.26/1M, output $2.08/1M; context 262,144, max output 32,768; modalities image,text -> text; features include Reasoning)
+# https://www.qwencloud.com/models/qwen3-vl-plus (enable_thinking enables reasoning; thinking_budget sets max reasoning tokens; qwen3-vl-plus supports enable_thinking)
+# https://www.alibabacloud.com/help/en/model-studio/qwen3-vl-plus (context 262144, max output 32768)
+# Toggle: enable_thinking true|false
+# Budget: thinking_budget (integer reasoning tokens)
+base_model = "alibaba/qwen3-vl-plus"
+
+[cost]
+input = 0.26
+output = 2.08
+
+[[reasoning_options]]
+type = "toggle"
+
+[[reasoning_options]]
+type = "budget_tokens"
