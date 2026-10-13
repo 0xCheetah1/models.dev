@@ -1,0 +1,11 @@
+# https://aimlapi.com/models/deepseek-v3-2-exp-non-thinking (Input $0.371358/1M, Output $0.563914/1M, Cached input $0.371358/1M; 128K context, 64K max output; text->text; built by DeepSeek)
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking (model id deepseek/deepseek-non-thinking-v3.2-exp; September 2025 update of DeepSeek V3 non-reasoning model)
+# Lab base: https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp and https://www.deepseek.com/en/news/v3-2-exp
+base_model = "deepseek/deepseek-v3.2-exp"
+name = "DeepSeek V3.2 Exp Non-Thinking"
+reasoning = false
+
+[cost]
+input = 0.371358
+output = 0.563914
+cache_read = 0.371358

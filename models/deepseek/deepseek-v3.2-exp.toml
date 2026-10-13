@@ -1,0 +1,29 @@
+# https://www.deepseek.com/en/news/v3-2-exp (DeepSeek-V3.2-Exp released 2025-09-29, DSA, live on App/Web/API)
+# https://api-docs.deepseek.com/news/news250929/ (same release, HF model + tech report links)
+# https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp (MIT license, 685B MoE, reasoning + agentic tool-use benchmarks)
+# https://aimlapi.com/models/deepseek-v3-2-exp-non-thinking (128K context, 64K max output, text->text, Tools/Structured output features)
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-reasoner-v3.2-exp-non-thinking (temperature + json_schema response_format support)
+name = "DeepSeek V3.2 Exp"
+description = "Experimental hybrid-reasoning DeepSeek model with thinking and non-thinking modes, sparse attention, and tool-use"
+family = "deepseek"
+release_date = "2025-09-29"
+last_updated = "2025-09-29"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = true
+license = "MIT License"
+
+[limit]
+context = 128_000
+output = 64_000
+
+[modalities]
+input = ["text"]
+output = ["text"]
+
+[[weights]]
+label = "Hugging Face"
+url = "https://huggingface.co/deepseek-ai/DeepSeek-V3.2-Exp"
