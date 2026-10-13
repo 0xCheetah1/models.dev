@@ -1,0 +1,15 @@
+# Sources:
+# - https://aimlapi.com/models/grok-4-5 (x-ai/grok-4-5; context 500K; input $2.6/M, output $7.8/M, cached input $0.39/M; Features: Reasoning (3 effort levels); released Jul 8, 2026)
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-4-5 (POST /v1/chat/completions; reasoning.effort enum low|medium|high; PDF file input)
+# - https://docs.x.ai/developers/models/grok-4.5 (first-party Grok 4.5: context 500K; reasoning low|medium|high|xhigh, default high)
+# reasoning_options: multi-model relay — copy first-party providers/xai + peers (low/medium/high)
+base_model = "xai/grok-4.5"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 2.6
+output = 7.8
+cache_read = 0.39
