@@ -1,0 +1,14 @@
+# Sources:
+# - https://aimlapi.com/models/grok-code-fast-1 — AIMLAPI catalog lists x-ai/grok-code-fast-1 with 256K context, $1.3/1M input, $2.6/1M output, $0.26/1M cached input.
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-code-fast-1 — request schema exposes reasoning.effort = low|medium|high; example usage reports reasoning_tokens.
+# - https://docs.x.ai/developers/models/grok-code-fast-1 — xAI lists grok-code-fast-1 as an alias of grok-build-0.1 with 256K context and reasoning Yes.
+base_model = "xai/grok-code-fast-1"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 1.3
+output = 2.6
+cache_read = 0.26
