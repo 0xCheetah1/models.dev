@@ -1,0 +1,17 @@
+# AIMLAPI serves google/gemini-2.5-flash-lite at 1M context, $0.0975/1M input, $0.39/1M output, $0.0975/1M cached input.
+# Model page (ID, pricing, context): https://aimlapi.com/models/google-gemini-2-5-flash-lite
+# Pricing index: https://aimlapi.com/ai-ml-api-pricing
+# API schema documents reasoning_effort = low|medium|high: https://docs.aimlapi.com/api-references/text-models-llm/google/gemini-2.5-flash-lite-preview
+base_model = "google/gemini-2.5-flash-lite"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.0975
+output = 0.39
+cache_read = 0.0975
+
+[limit]
+context = 1_000_000
