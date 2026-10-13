@@ -1,0 +1,17 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen3-7-plus (model alibaba/qwen3.7-plus; context 1M; input $0.416/1M, output $1.664/1M, cached input $0.0832/1M; reasoning + vision)
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3.7-plus (OpenAI-compatible chat completions; enable_thinking boolean + thinking_budget integer)
+# Toggle: enable_thinking true|false
+# Budget: thinking_budget (integer reasoning tokens)
+base_model = "alibaba/qwen3.7-plus"
+
+[[reasoning_options]]
+type = "toggle"
+
+[[reasoning_options]]
+type = "budget_tokens"
+
+[cost]
+input = 0.416
+output = 1.664
+cache_read = 0.0832
