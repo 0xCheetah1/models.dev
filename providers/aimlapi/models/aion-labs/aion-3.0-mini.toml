@@ -1,0 +1,15 @@
+# AIMLAPI serves aion-labs/aion-3.0-mini on chat completions.
+# Sources: https://docs.aimlapi.com/api-references/text-models-llm/aionlabs/aion-3.0-mini
+# Pricing (input $0.96278, output $1.92556, cached input $0.247572) and 131,072 context / 32,768 max output:
+# https://aimlapi.com/models/aion-labs-aion-3-0-mini and https://aimlapi.com/ai-ml-api-pricing
+# Reasoning effort low|medium|high per API schema (reasoning_effort, reasoning.effort) on the same docs page.
+base_model = "aion-labs/aion-3.0-mini"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.96278
+output = 1.92556
+cache_read = 0.247572
