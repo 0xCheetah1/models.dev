@@ -1,0 +1,16 @@
+# Source: https://aimlapi.com/models/mistralai-mistral-large-4-0 (accessed 2026-10-13): input $1.768 / output $5.434 / cached input $0.182 per MTok; context 524,288, max output 262,144; modalities Image, Text -> Text; model ID mistralai/mistral-large-4-0.
+# Effort: lab native reasoning_effort = none|high (see providers/mistral/models/mistral-large-4.toml and https://docs.mistral.ai/models/mistral-large-4-0); same set as AIMLAPI Mistral peer mistral-small-2603 and relays nano-gpt/lowrouter/cortecs.
+# Limit: context 524_288 overrides base 1M to match AIMLAPI technical reference and first-party effective limit.
+base_model = "mistral/mistral-large-4"
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "high"]
+
+[cost]
+input = 1.768
+output = 5.434
+cache_read = 0.182
+
+[limit]
+context = 524_288
