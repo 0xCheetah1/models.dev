@@ -1,0 +1,15 @@
+# AIMLAPI Claude 4 Sonnet: aliases anthropic/claude-sonnet-4 / claude-sonnet-4-20250514,
+# thinking via budget_tokens (min 1024).
+# https://docs.aimlapi.com/api-references/text-models-llm/anthropic/claude-4-sonnet
+# Pricing: input $4.1262, output $20.631, cached input $0.41262 per 1M tokens.
+# https://aimlapi.com/models/anthropic-claude-sonnet-4
+base_model = "anthropic/claude-sonnet-4-20250514"
+
+[[reasoning_options]]
+type = "budget_tokens"
+min = 1_024
+
+[cost]
+input = 4.1262
+output = 20.631
+cache_read = 0.41262
