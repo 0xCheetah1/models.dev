@@ -1,0 +1,20 @@
+# Lab source: https://api.aionlabs.ai/docs/models/ — aion-labs/aion-3.5, 256K context, Max output 32K, Released 2026-09-23, GLM multi-model system.
+# API ref: https://www.aionlabs.ai/docs/api-reference/ — context_length 262144, max_completion_tokens 32768, reasoning true, tool_calls true, reasoning_effort levels [low, high, max] (default high, cannot be disabled), modality text->text.
+name = "Aion 3.5"
+description = "A multi-model system built on the GLM family of models. Aion 3.5 employs a collaborative generation process in which multiple specialized models contribute to each response. The result is stronger narrative structure, more compelling tension and conflict, and a nuanced treatment of mature and darker themes."
+release_date = "2026-09-23"
+last_updated = "2026-09-23"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = false
+open_weights = false
+
+[limit]
+context = 262_144
+output = 32_768
+
+[modalities]
+input = ["text"]
+output = ["text"]

@@ -1,0 +1,12 @@
+# AIMLAPI pricing: https://aimlapi.com/models/aion-labs-aion-3-5 — Input $4.1262/1M, Output $8.2524/1M, Cached input $1.03155/1M, Context 262,144, Max output 32,768, Released Sep 23, 2026.
+# Reasoning baseline (relay): https://www.aionlabs.ai/docs/api-reference/ — Aion 3.5 accepts reasoning_effort low|high|max (default high, cannot be disabled); peers openrouter/kilo use effort [low, high, max].
+base_model = "aion-labs/aion-3.5"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "high", "max"]
+
+[cost]
+input = 4.1262
+output = 8.2524
+cache_read = 1.03155
