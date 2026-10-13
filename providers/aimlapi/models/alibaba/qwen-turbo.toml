@@ -1,0 +1,12 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen-turbo-api — alibaba/qwen-turbo: Input $0.065, Output $0.26, Cached input $0.013 per 1M; 1M context, 16,384 max output, text->text
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen-turbo — chat completions schema exposes no reasoning controls
+# https://docs.aimlapi.com/capabilities/thinking-reasoning — alibaba/qwen-turbo not listed as reasoning-controllable
+# No caller control on this gateway: no enable_thinking/thinking_budget/reasoning_effort for this model (same as aimlapi qwen-plus peer).
+base_model = "alibaba/qwen-turbo"
+reasoning_options = []
+
+[cost]
+input = 0.065
+output = 0.26
+cache_read = 0.013
