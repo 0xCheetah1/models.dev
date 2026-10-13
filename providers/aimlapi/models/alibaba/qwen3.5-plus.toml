@@ -1,0 +1,18 @@
+# Sources:
+# - AIMLAPI pricing/context (0-256K $0.52/$3.12; 256K-1M $1.56/$9.36; 1M context; 65,536 max output): https://aimlapi.com/models/qwen3-5-plus
+# - AIMLAPI reasoning guide (reasoning_effort low/medium/high; lists alibaba/qwen3.5-plus-20260218): https://docs.aimlapi.com/capabilities/thinking-reasoning
+# - Alibaba native hybrid thinking (enable_thinking + thinking_budget for qwen3.5-plus): https://www.alibabacloud.com/help/en/model-studio/deep-thinking
+base_model = "alibaba/qwen3.5-plus"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.52
+output = 3.12
+
+[[cost.tiers]]
+tier = { type = "context", size = 256_000 }
+input = 1.56
+output = 9.36
