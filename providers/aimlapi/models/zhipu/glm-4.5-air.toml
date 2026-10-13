@@ -1,0 +1,18 @@
+# Sources: https://aimlapi.com/models/glm-4-5-air (model ID zhipu/glm-4.5-air, $0.26/$1.43/$0.039 per 1M, 128K context, 98K max output)
+# https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-4.5-air (hybrid thinking/non-thinking mode, thinking.type enabled|disabled, reasoning_content in example response)
+# Toggle: thinking.type = enabled|disabled
+base_model = "zhipuai/glm-4.5-air"
+
+[[reasoning_options]]
+type = "toggle"
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.26
+output = 1.43
+cache_read = 0.039
+
+[limit]
+context = 128_000
