@@ -1,0 +1,13 @@
+# AIMLAPI GLM-5.1: https://aimlapi.com/models/glm-5-1 (model id zhipu/glm-5.1, $1.82 in / $5.72 out / $0.338 cached per 1M, 200K context, 128K output)
+# API ref: https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-5.1 (chat-completions schema lists no thinking/reasoning_effort field; example response returns reasoning_content)
+# Native GLM-5.1 thinking is toggle-only with no effort levels (see providers/zhipuai/models/glm-5.1.toml); no toggle field on this relay surface, so no caller control.
+base_model = "zhipuai/glm-5.1"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 1.82
+output = 5.72
+cache_read = 0.338
