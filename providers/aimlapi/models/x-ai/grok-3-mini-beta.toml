@@ -1,0 +1,16 @@
+# AIMLAPI serves xAI Grok 3 Mini Beta as x-ai/grok-3-mini-beta.
+# Sources:
+# - https://aimlapi.com/models/grok-3-beta-mini-api (input $1.625/M, output $3.25/M, cached input $0.26/M)
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-3-mini-beta (model ID, chat completions endpoint)
+# - https://raw.githubusercontent.com/aimlapi/api-docs/refs/heads/main/docs/api-references/text-models-llm/xAI/grok-3-mini-beta.json (reasoning.effort enum low|medium|high for this model)
+# - https://grok-api.apidog.io/reasoning-15799160e0 (xAI native reasoning_effort low/high; AIMLAPI gateway normalizes to low/medium/high)
+base_model = "xai/grok-3-mini-beta"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26

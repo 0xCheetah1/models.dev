@@ -1,0 +1,27 @@
+# Lab model for xAI Grok 3 Mini Beta, used as base_model by relays such as AIMLAPI.
+# Sources:
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-3-mini-beta (model ID x-ai/grok-3-mini-beta, description, chat completions, tools + reasoning support)
+# - https://aimlapi.com/models/grok-3-beta-mini-api (131K context, function calling / structured outputs, knowledge cutoff February 2025)
+# - https://grok-api.apidog.io/reasoning-15799160e0 (mirror of xAI reasoning guide: grok-3-mini-beta reasoning with reasoning_effort low/high and reasoning_content trace)
+# - https://ominigate.ai/en/models/x-ai/grok-3-mini-beta (release 2025-04-09, 131072 context, text in/out, reasoning + tools)
+# - https://cloudprice.net/models/xai-grok-3-mini-beta (release 2025-04-09, knowledge 2025-02-28, 131K text-only context)
+name = "Grok 3 Mini Beta"
+description = "Lightweight xAI reasoning model that thinks before responding, optimized for math and reasoning-heavy tasks"
+family = "grok"
+knowledge = "2025-02"
+release_date = "2025-04-09"
+last_updated = "2025-04-09"
+attachment = false
+reasoning = true
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = false
+
+[limit]
+context = 131_072
+output = 131_072
+
+[modalities]
+input = ["text"]
+output = ["text"]
