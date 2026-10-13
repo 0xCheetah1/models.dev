@@ -1,0 +1,13 @@
+# Source: https://aimlapi.com/models/aion-labs-aion-3-0 — lists aion-labs/aion-3.0 at $4.1262/1M input, $8.2524/1M output, $1.03155/1M cached input; 131,072 context, 32,768 max output.
+# Reasoning: https://docs.aimlapi.com/api-references/text-models-llm/aionlabs/aion-3.0-mini.md — sibling Aion model on same AIMLAPI OpenAI-compatible surface exposes reasoning_effort + reasoning.effort = low|medium|high.
+# Base: models/aion-labs/aion-3.0.toml provides name/description/dates/capabilities/limits/modalities.
+base_model = "aion-labs/aion-3.0"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 4.1262
+output = 8.2524
+cache_read = 1.03155
