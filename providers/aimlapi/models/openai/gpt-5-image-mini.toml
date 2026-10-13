@@ -1,0 +1,13 @@
+# Sources:
+# - Pricing/context: https://aimlapi.com/models/openai-gpt-5-image-mini (Input $3.4385/1M, Output $2.7508/1M, Cached input $0.34385/1M, 400K context, 128K max output)
+# - Reasoning controls: https://docs.aimlapi.com/api-references/text-models-llm/openai/gpt-5-image (reasoning_effort = low|medium|high on this host's chat-completions path; same GPT-Image family/endpoint as gpt-5-image-mini)
+base_model = "openai/gpt-5-image-mini"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 3.4385
+output = 2.7508
+cache_read = 0.34385
