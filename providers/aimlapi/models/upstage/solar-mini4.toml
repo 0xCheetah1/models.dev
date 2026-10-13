@@ -1,0 +1,16 @@
+# Sources (accessed 2026-10-13):
+#   https://aimlapi.com/models/upstage-solar-mini-4
+#   https://docs.aimlapi.com/api-references/text-models-llm/upstage/solar-mini4
+#   https://console.upstage.ai/docs/capabilities/generate/reasoning
+# AIMLAPI host pricing (USD/MTok); effort levels mirror Upstage native
+# (none/minimal off; low/max on) and same-model relay peers.
+base_model = "upstage/solar-mini4"
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "minimal", "low", "medium", "high", "xhigh", "max"]
+
+[cost]
+input = 0.13754
+output = 0.55016
+cache_read = 0.013754
