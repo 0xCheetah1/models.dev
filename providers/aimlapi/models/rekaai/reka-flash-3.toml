@@ -1,0 +1,10 @@
+# Source: https://aimlapi.com/models/rekaai-reka-flash-3 (input $0.13754/1M, output $0.27508/1M)
+# Reasoning: always-on thinking via <think> tags per https://reka.ai/news/introducing-reka-flash;
+# not listed under reasoning_effort controls at https://docs.aimlapi.com/capabilities/thinking-reasoning,
+# matching peer providers/openrouter/models/rekaai/reka-flash-3.toml with no caller control.
+base_model = "rekaai/reka-flash-3"
+reasoning_options = []
+
+[cost]
+input = 0.13754
+output = 0.27508
