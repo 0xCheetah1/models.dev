@@ -1,0 +1,15 @@
+# Sources:
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-4-1-fast-non-reasoning (model ID `x-ai/grok-4-1-fast-non-reasoning`; 2M-token context, non-reasoning variant)
+# - https://aimlapi.com/models/grok-4-1-fast-reasoning (AIMLAPI Grok 4.1 Fast pricing: $1.625/1M input, $3.25/1M output, $0.26/1M cached input; 2M context / 1,999,000 max output)
+# - https://aimlapi.com/models/grok-4-fast (prior-gen Grok Fast non-reasoning shows same $1.625/$3.25/$0.26 AIMLAPI tier)
+# - https://x.ai/news/grok-4-1-fast (xAI release 2025-11-19; `grok-4-1-fast-non-reasoning` instant-response variant)
+base_model = "xai/grok-4.1-fast"
+name = "Grok 4.1 Fast Non-Reasoning"
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26
+
+[limit]
+output = 1_999_000
