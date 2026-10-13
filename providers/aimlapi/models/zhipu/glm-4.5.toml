@@ -1,0 +1,12 @@
+# AIMLAPI zhipu/glm-4.5 pricing: https://aimlapi.com/models/glm-4-5
+# Docs (thinking mode, enabled by default): https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-4.5
+# Toggle: thinking.type = enabled|disabled
+base_model = "zhipuai/glm-4.5"
+
+[[reasoning_options]]
+type = "toggle"
+
+[cost]
+input = 0.78
+output = 2.86
+cache_read = 0.143
