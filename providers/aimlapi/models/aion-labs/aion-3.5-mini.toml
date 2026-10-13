@@ -1,0 +1,11 @@
+# AIMLAPI pricing: https://aimlapi.com/models/aion-labs-aion-3-5-mini (Input $0.96278, Output $1.92556, Cached $0.247572, 262,144 context, 32,768 max output); https://aimlapi.com/ai-ml-api-pricing (Aion-3.5-Mini 256K $0.96278 cache $0.2476 $1.92556). Relay effort low/high/max from peers https://openrouter.ai/aion-labs/aion-3.5-mini and aimlapi precedent with same set (z-ai/glm-5.3-flash); aimlapi is a multi-model relay.
+base_model = "aion-labs/aion-3.5-mini"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "high", "max"]
+
+[cost]
+input = 0.96278
+output = 1.92556
+cache_read = 0.247572
