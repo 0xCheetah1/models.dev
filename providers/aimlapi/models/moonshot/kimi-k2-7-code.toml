@@ -1,0 +1,13 @@
+# Source: https://aimlapi.com/models/kimi-k2-7-code (input $1.235, output $5.20, cached input $0.247 per 1M tokens; context 262,144, max output 260,000; released Jun 12, 2026)
+# Docs: https://docs.aimlapi.com/api-references/text-models-llm/moonshot/kimi-k2-7-code (model ID moonshot/kimi-k2-7-code, reasoning_content in response)
+# Lab: models/moonshotai/kimi-k2.7-code.toml (same Kimi K2.7 Code release 2026-06-12)
+base_model = "moonshotai/kimi-k2.7-code"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 1.235
+output = 5.2
+cache_read = 0.247
