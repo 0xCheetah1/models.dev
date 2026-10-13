@@ -1,0 +1,19 @@
+# Sources:
+# - https://aimlapi.com/models/claude-opus-4-6 (model ID anthropic/claude-opus-4-6; pricing $6.5/$32.5/$0.65 per 1M; context 200K; max output 128K)
+# - https://docs.aimlapi.com/api-references/text-models-llm/anthropic/claude-4.6-opus (model IDs anthropic/claude-opus-4-6, claude-opus-4-6)
+# - providers/anthropic/models/claude-opus-4-6.toml (native effort low/medium/high/max)
+# Peer shape: providers/aimlapi/models/anthropic/claude-sonnet-4.6.toml
+base_model = "anthropic/claude-opus-4-6"
+name = "Claude 4.6 Opus"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high", "max"]
+
+[cost]
+input = 6.5
+output = 32.5
+cache_read = 0.65
+
+[limit]
+context = 200_000
