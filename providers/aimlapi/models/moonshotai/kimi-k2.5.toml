@@ -1,0 +1,12 @@
+# Pricing: https://aimlapi.com/models/kimi-k2-5 (Input $0.78 / 1M, Output $3.9 / 1M, Cached input $0.13 / 1M)
+# Pricing index: https://aimlapi.com/ai-ml-api-pricing (Kimi K2.5 256K, $0.78 cache $0.13 / $3.9)
+# API id: https://docs.aimlapi.com/api-references/text-models-llm/moonshot/kimi-k2-5 (model moonshotai/kimi-k2.5)
+# Native thinking control: https://modelparams.dev/models/moonshot/kimi-k2.5 (thinking.type enabled|disabled, default enabled)
+# Toggle: thinking.type = enabled|disabled
+base_model = "moonshotai/kimi-k2.5"
+reasoning_options = [{ type = "toggle" }]
+
+[cost]
+input = 0.78
+output = 3.9
+cache_read = 0.13
