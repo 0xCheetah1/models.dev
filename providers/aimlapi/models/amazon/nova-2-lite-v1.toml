@@ -1,0 +1,13 @@
+# Sources: https://aimlapi.com/models/amazon-nova-2-lite-v1 (input $0.41262/1M, output $3.4385/1M, 1M context, 65,535 max output)
+# Pricing index: https://aimlapi.com/ai-ml-api-pricing (Amazon Nova 2 Lite $0.41262 in / $3.4385 out)
+# Reasoning: https://docs.aimlapi.com/api-references/text-models-llm/amazon/nova-2-lite-v1 (reasoning_effort low|medium|high)
+# Native controls: https://docs.aws.amazon.com/nova/latest/nova2-userguide/using-converse-api.html (type enabled|disabled + maxReasoningEffort low|medium|high)
+base_model = "amazon/nova-2-lite-v1"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 0.41262
+output = 3.4385
