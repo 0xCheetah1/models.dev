@@ -1,0 +1,19 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/qwen3-32b (pricing $0.208 in / $0.832 out per 1M, 131K context, 16384 max output)
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-32b (enable_thinking + thinking_budget, reasoning_content)
+# Toggle: enable_thinking true|false
+# Budget: thinking_budget (integer reasoning tokens)
+base_model = "alibaba/qwen3-32b"
+
+[interleaved]
+field = "reasoning_content"
+
+[[reasoning_options]]
+type = "toggle"
+
+[[reasoning_options]]
+type = "budget_tokens"
+
+[cost]
+input = 0.208
+output = 0.832
