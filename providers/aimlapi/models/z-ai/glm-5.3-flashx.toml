@@ -1,0 +1,25 @@
+# Sources:
+# - https://aimlapi.com/models/glm-5-3-flashx (AIMLAPI list $0.481/$1.625/M, cached input $0.0975/M; 1,048,576 context; 131,072 max output; Sep 18 2026)
+# - https://docs.aimlapi.com/api-references/text-models-llm/zhipu-ai-1/glm-5.3-flashx.md (model ID z-ai/glm-5.3-flashx; high-speed Flash variant)
+# - https://docs.z.ai/guides/vlm/glm-5.3-flash (Flash/FlashX share weights; thinking always on)
+# Effort: reasoning_effort = low|high|max (thinking always on)
+base_model = "zhipuai/glm-5.3-flash"
+name = "GLM 5.3 FlashX"
+description = "High-speed GLM-5.3-Flash serving option for coding and agent workflows"
+release_date = "2026-09-18"
+last_updated = "2026-09-18"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "high", "max"]
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.481
+output = 1.625
+cache_read = 0.0975
+
+[limit]
+context = 1_048_576
