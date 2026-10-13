@@ -1,0 +1,12 @@
+# Sources:
+# - Pricing: input $1.10032, output $2.20064, cached input $0.27508 per 1M tokens: https://aimlapi.com/models/aion-labs-aion-2-0
+# - Context 131072 / max output 32768, model ID aion-labs/aion-2.0: https://aimlapi.com/models/aion-labs-aion-2-0
+# - API reference confirms model served at POST /v1/chat/completions: https://docs.aimlapi.com/api-references/text-models-llm/aionlabs/aion-2.0
+# - Reasoning always-on, no effective caller control; matches OpenRouter peer (reasoning_options = []): providers/openrouter/models/aion-labs/aion-2.0.toml
+base_model = "aion-labs/aion-2.0"
+reasoning_options = []
+
+[cost]
+input = 1.10032
+output = 2.20064
+cache_read = 0.27508
