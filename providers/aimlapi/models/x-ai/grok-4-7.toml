@@ -1,0 +1,17 @@
+# Sources: https://aimlapi.com/models/grok-4-7, https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-4-7, https://docs.x.ai/developers/models/grok-4.7
+base_model = "xai/grok-4.7"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high", "xhigh"]
+
+[cost]
+input = 2.6
+output = 7.8
+cache_read = 0.65
+
+[[cost.tiers]]
+tier = { type = "context", size = 200_000 }
+input = 5.2
+output = 15.6
+cache_read = 1.3
