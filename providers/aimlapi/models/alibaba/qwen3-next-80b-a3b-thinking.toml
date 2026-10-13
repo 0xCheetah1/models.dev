@@ -1,0 +1,18 @@
+# Sources (accessed 2026-10-13):
+# https://aimlapi.com/models/alibaba-qwen3-next-80b-a3b-thinking — pricing $0.195 input / $1.56 output per 1M tokens; context 126,976, max output 81,920
+# https://docs.aimlapi.com/api-references/text-models-llm/alibaba-cloud/qwen3-next-80b-a3b-thinking — reasoning_content in chat completion response
+base_model = "alibaba/qwen3-next-80b-a3b-thinking"
+
+[[reasoning_options]]
+type = "budget_tokens"
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.195
+output = 1.56
+
+[limit]
+context = 126_976
+output = 81_920
