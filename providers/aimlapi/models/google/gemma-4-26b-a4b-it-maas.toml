@@ -1,0 +1,14 @@
+# Sources:
+# - https://aimlapi.com/models/google-gemma-4-26b-a4b-it-maas (Input $0.195/1M, Output $0.78/1M, Cached $0.195/1M, 262,144 context, 128,000 max output)
+# - https://docs.cloud.google.com/gemini-enterprise-agent-platform/models/maas/google/gemma-4-26b-a4b-it (MaaS model ID gemma-4-26b-a4b-it-maas)
+# No caller control: same gateway as google/gemma-4-26b-a4b-it — reasoning_effort is not read (invalid returns 200), toggle/budget dropped.
+base_model = "google/gemma-4-26b-a4b-it"
+reasoning_options = []
+
+[cost]
+input = 0.195
+output = 0.78
+cache_read = 0.195
+
+[limit]
+output = 128_000
