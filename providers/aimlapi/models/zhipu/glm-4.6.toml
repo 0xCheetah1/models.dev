@@ -1,0 +1,18 @@
+# Sources:
+# - https://aimlapi.com/models/glm-4-6 (model ID zhipu/glm-4.6; Input $0.78/MTok, Output $2.86/MTok, Cached input $0.143/MTok; 200K context, 128K max output)
+# - https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-4.6 (model exists; thinking mode enabled by default)
+# - https://docs.aimlapi.com/api-references/text-models-llm/zhipu/glm-4.5 (thinking.type = enabled|disabled; only supported by GLM-4.5 and above models)
+# Toggle: thinking.type = enabled|disabled
+base_model = "zhipuai/glm-4.6"
+
+[[reasoning_options]]
+type = "toggle"
+
+[cost]
+input = 0.78
+output = 2.86
+cache_read = 0.143
+
+[limit]
+context = 200_000
+output = 128_000
