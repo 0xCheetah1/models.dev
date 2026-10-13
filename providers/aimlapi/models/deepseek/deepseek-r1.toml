@@ -1,0 +1,16 @@
+# https://aimlapi.com/models/deepseek-deepseek-r1 (DeepSeek Reasoner V3.1, id deepseek/deepseek-r1: 128K context, 64K max output, input $0.6877, output $2.95711, cached $0.6877)
+# https://aimlapi.com/ai-ml-api-pricing (DeepSeek Reasoner V3.1 deepseek/deepseek-r1: 128K, $0.6877 cache $0.6877 / $2.95711)
+# https://docs.aimlapi.com/api-references/text-models-llm/deepseek/deepseek-r1 (deepseek/deepseek-r1 and deepseek-reasoner are the same model; request schema exposes no reasoning_effort/reasoning control; responses expose reasoning_content)
+base_model = "deepseek/deepseek-r1"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 0.6877
+output = 2.95711
+cache_read = 0.6877
+
+[limit]
+output = 64_000
