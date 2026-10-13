@@ -1,0 +1,8 @@
+# AIMLAPI Grok 3 Beta (x-ai/grok-3-beta).
+# Source: https://aimlapi.com/models/grok-3-beta-api (Input $1.625 / Output $3.25 / Cached input $0.26 per 1M tokens; 131k context; model id x-ai/grok-3-beta)
+base_model = "xai/grok-3-beta"
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26

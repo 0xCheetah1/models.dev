@@ -1,0 +1,24 @@
+# xAI Grok 3 Beta lab metadata.
+# Sources:
+# - https://x.ai/news/grok-3 (Grok 3 unveiled Feb 19, 2025; reasoning/math/coding strengths, Colossus training)
+# - https://aimlapi.com/models/grok-3-beta-api (xAI provider; 131k context / 130k max output; text->text; file input + tools/parallel tool calls + structured output; commercial license)
+# - https://docs.x.ai/developers/model-capabilities/text/reasoning (reasoning_effort table covers only grok-4.5 and later; grok-3-beta is non-reasoning) and https://grok-api.apidog.io/reasoning-15799160e0 (xAI guide mirror: grok-3-beta and grok-3-fast-beta do not support reasoning; temperature is a supported chat parameter)
+name = "Grok 3 Beta"
+description = "xAI's Grok 3 Beta flagship model for advanced reasoning, mathematics, coding, and agentic tool use"
+family = "grok"
+release_date = "2025-02-19"
+last_updated = "2025-02-19"
+attachment = true
+reasoning = false
+temperature = true
+tool_call = true
+structured_output = true
+open_weights = false
+
+[limit]
+context = 131_072
+output = 130_000
+
+[modalities]
+input = ["text"]
+output = ["text"]
