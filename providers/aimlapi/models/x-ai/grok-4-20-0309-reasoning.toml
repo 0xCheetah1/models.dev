@@ -1,0 +1,14 @@
+# Source: https://api.aimlapi.com/v1/models?include=pricing,modalities (name "Grok 4.20 Reasoning", contextLength 2000000, outputMax 1999000, USD 1.625 in / 3.25 out / 0.26 cached per MTok)
+# Reasoning: always-on — lab providers/xai/models/grok-4.20-0309-reasoning.toml publishes reasoning_options = [], copied by peers (edenai, tempr, merge-gateway); docs-json for this id exposes no reasoning_effort control.
+base_model = "xai/grok-4.20-0309-reasoning"
+name = "Grok 4.20 Reasoning"
+reasoning_options = []
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26
+
+[limit]
+context = 2_000_000
+output = 1_999_000
