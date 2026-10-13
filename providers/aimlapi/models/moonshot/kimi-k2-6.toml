@@ -1,0 +1,16 @@
+# moonshot/kimi-k2-6 is Kimi K2.6 on AI/ML API (alias of moonshotai/kimi-k2.6).
+# Pricing: https://aimlapi.com/models/kimi-k2-6 — Input $1.235, Output $5.20, Cached input $0.208 per 1M tokens; model ID moonshot/kimi-k2-6.
+# Docs: https://docs.aimlapi.com/api-references/text-models-llm/moonshot/kimi-k2-6 — model moonshot/kimi-k2-6; sample response returns reasoning_content.
+# Toggle: extra_body chat_template_kwargs.thinking = true|false (Instant mode when false); FAQ on pricing page and https://huggingface.co/moonshotai/Kimi-K2.6.
+base_model = "moonshotai/kimi-k2.6"
+
+[interleaved]
+field = "reasoning_content"
+
+[[reasoning_options]]
+type = "toggle"
+
+[cost]
+input = 1.235
+output = 5.2
+cache_read = 0.208
