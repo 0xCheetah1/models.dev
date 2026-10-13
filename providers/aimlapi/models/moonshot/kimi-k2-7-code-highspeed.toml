@@ -1,0 +1,14 @@
+# Sources:
+# - https://aimlapi.com/models/kimi-k2-7-code-highspeed (AIMLAPI pricing: $2.47 input, $10.40 output, $0.494 cached per 1M; context 262,144; model id moonshot/kimi-k2-7-code-highspeed)
+# - https://docs.aimlapi.com/api-references/text-models-llm/moonshot/kimi-k2-7-code-highspeed (chat completions schema has no reasoning control; example response carries reasoning_content)
+# - https://platform.kimi.ai/docs/guide/use-thinking-models (lab: kimi-k2.7-code thinking always on, reasoning_effort not supported; highspeed identical behavior via reasoning_content)
+base_model = "moonshotai/kimi-k2.7-code-highspeed"
+reasoning_options = []
+
+[interleaved]
+field = "reasoning_content"
+
+[cost]
+input = 2.47
+output = 10.4
+cache_read = 0.494
