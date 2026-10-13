@@ -1,0 +1,13 @@
+# AIMLAPI model docs: https://docs.aimlapi.com/api-references/text-models-llm/ibm/granite-4.2-8b
+# AIMLAPI pricing: https://aimlapi.com/ai-ml-api-pricing (IBM Granite 4.2 8B: 128K tokens, $0.13754 input / $0.0688 cache / $0.34385 output per 1M tokens)
+# IBM Granite 4.2 overview: https://www.ibm.com/granite/docs/models/granite4-2
+base_model = "ibm/granite-4.2-8b"
+
+[[reasoning_options]]
+type = "effort"
+values = ["none", "low", "high"]
+
+[cost]
+input = 0.13754
+output = 0.34385
+cache_read = 0.0688
