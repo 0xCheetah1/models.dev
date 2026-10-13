@@ -1,0 +1,17 @@
+# Sources:
+# - https://aimlapi.com/models/grok-4-1-fast-reasoning (Input $1.625 / Output $3.25 / Cached $0.26; 2M context, 1,999,000 max output)
+# - https://docs.aimlapi.com/api-references/text-models-llm/xai/grok-4-1-fast-reasoning (reasoning.effort enum low|medium|high)
+# - https://x.ai/news/grok-4-1-fast (lab release 2025-11-19; reasoning / non-reasoning variants)
+base_model = "xai/grok-4.1-fast-reasoning"
+
+[[reasoning_options]]
+type = "effort"
+values = ["low", "medium", "high"]
+
+[cost]
+input = 1.625
+output = 3.25
+cache_read = 0.26
+
+[limit]
+output = 1_999_000
