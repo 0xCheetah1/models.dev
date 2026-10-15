@@ -10,3 +10,7 @@ field = "reasoning_content"
 input = 0
 output = 0
 cache_read = 0
+
+[modalities]
+input = ["text", "image"]
+output = ["text"]
