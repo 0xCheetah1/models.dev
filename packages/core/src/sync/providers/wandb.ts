@@ -177,18 +177,17 @@ export function buildWandbModel(
 
 // The endpoint is authoritative for on/off: a toggle means thinking can be
 // switched per request, while no options means it is always on. It never lists
-// effort levels or budgets, so those are hand-authored after a live probe and
-// must survive the sync instead of being wiped back to the bare endpoint list.
+// effort levels, so an effort option authored in the TOML must survive the
+// sync instead of being wiped back to the bare endpoint list.
 export function mergeReasoningOptions(
   endpoint: NonNullable<WandbModel["reasoning_options"]>,
   existing: ExistingModel["reasoning_options"] | undefined,
 ): NonNullable<WandbModel["reasoning_options"]> {
-  const authored = (existing ?? []).filter((option) => option.type !== "toggle");
-  if (authored.length === 0) return endpoint;
+  const effort = existing?.find((option) => option.type === "effort");
+  if (effort === undefined) return endpoint;
   // An effort list containing "none" already expresses turning thinking off.
-  const offViaEffort = authored.some((option) => option.type === "effort" && option.values.includes("none"));
-  const toggleable = endpoint.some((option) => option.type === "toggle") && !offViaEffort;
-  return [...(toggleable ? [{ type: "toggle" as const }] : []), ...authored];
+  const toggleable = endpoint.some((option) => option.type === "toggle") && !effort.values.includes("none");
+  return [...(toggleable ? [{ type: "toggle" as const }] : []), effort];
 }
 
 function buildCost(

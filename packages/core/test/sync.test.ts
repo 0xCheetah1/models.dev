@@ -3151,6 +3151,7 @@ test("W&B takes on/off from the endpoint and effort from the authored file", () 
   expect(mergeReasoningOptions([{ type: "toggle" }], [{ type: "effort", values: ["none", "high"] }]))
     .toEqual([{ type: "effort", values: ["none", "high"] }]);
   expect(mergeReasoningOptions([{ type: "toggle" }], [{ type: "toggle" }])).toEqual([{ type: "toggle" }]);
+  expect(mergeReasoningOptions([], [{ type: "budget_tokens" }])).toEqual([]);
   expect(mergeReasoningOptions([], undefined)).toEqual([]);
 });
 
