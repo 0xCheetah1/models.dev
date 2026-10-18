@@ -145,10 +145,9 @@ export function buildWandbModel(
     family: resolveFamily(model),
     attachment: model.attachment,
     reasoning: model.reasoning,
-    // The endpoint is authoritative for reasoning controls: an explicit list
-    // (e.g. a toggle) means the capability is exposed, while reasoning without
-    // any options means reasoning is always on and cannot be disabled.
-    reasoning_options: model.reasoning ? model.reasoning_options ?? [] : undefined,
+    reasoning_options: model.reasoning
+      ? mergeReasoningOptions(model.reasoning_options ?? [], existing?.reasoning_options)
+      : undefined,
     temperature: model.temperature ?? true,
     tool_call: model.tool_call,
     structured_output: model.structured_output === true,
@@ -174,6 +173,22 @@ export function buildWandbModel(
 
   if (baseModel === undefined) return synced;
   return factorBaseModel(baseModel, synced, limit, existing?.base_model_omit);
+}
+
+// The endpoint is authoritative for on/off: a toggle means thinking can be
+// switched per request, while no options means it is always on. It never lists
+// effort levels or budgets, so those are hand-authored after a live probe and
+// must survive the sync instead of being wiped back to the bare endpoint list.
+export function mergeReasoningOptions(
+  endpoint: NonNullable<WandbModel["reasoning_options"]>,
+  existing: ExistingModel["reasoning_options"] | undefined,
+): NonNullable<WandbModel["reasoning_options"]> {
+  const authored = (existing ?? []).filter((option) => option.type !== "toggle");
+  if (authored.length === 0) return endpoint;
+  // An effort list containing "none" already expresses turning thinking off.
+  const offViaEffort = authored.some((option) => option.type === "effort" && option.values.includes("none"));
+  const toggleable = endpoint.some((option) => option.type === "toggle") && !offViaEffort;
+  return [...(toggleable ? [{ type: "toggle" as const }] : []), ...authored];
 }
 
 function buildCost(
